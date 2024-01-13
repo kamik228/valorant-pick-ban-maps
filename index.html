@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Valorant Ban Map</title>
+  <link rel="icon" href="/valorant-logo.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="./style.scss" rel="stylesheet/scss" type="text/css">
+  <script language="JavaScript" type="text/javascript" src="/script.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="item header">
+      <img class="valorant" src="/valorant-logo.svg">
+      <h1>Valorant ban map</h1>
+    </div>
+    <div class="item sidebar">
+      <div class="in-sidebar">
+        <h4>To start banning, please tell us your Team Names:</h4>
+        Team 1:<input type="text" class="teams" id="team1"><br>
+        Team 2:<input type="text" class="teams" id="team2"><br>
+        <button id="sumbit-button" class="sumbit-button" onclick="ShowTeamNames()" type="submit"><b>Next</b></button>
+
+        <h4>Optional - Upload Team Logos:</h4>
+        <label class="button-choose1" for="button-text-team1" id="1team-load-button">Choose logo for Team 1</label>
+        <input id="button-text-team1" type="file" accept="image/*" onchange="loadFile1(event)">
+        <script>
+          var loadFile1 = function (event) {
+            var output = document.getElementById('output1');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function () {
+              URL.revokeObjectURL(output.src) // free memory
+            }
+          };
+        </script>
+        <br>
+        <br>
+        <label class="button-choose2" for="button-text-team2" id="2team-load-button">Choose logo for Team 2</label>
+        <input id="button-text-team2" type="file" accept="image/*" onchange="loadFile2(event)">
+        <script>
+          var loadFile2 = function (event) {
+            var output = document.getElementById('output2');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function () {
+              URL.revokeObjectURL(output.src) // free memory
+            }
+          };
+        </script>
+
+      </div>
+    </div>
+    <div class="item content-1">
+      <div class="maps">
+        <div id="1" onclick="BanMap(1)" class="map div1"><img class="map map-img " src="/maps/Loading_Screen_Ascent.png">
+          <img class="ban-img" id="ban-img-1" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">ASCENT</div>
+          </div>
+        </div>
+
+        <div id="2" onclick="BanMap(2)" class="map div2"><img class="map map-img" src="/maps/Loading_Screen_Bind.png">
+          <img class="ban-img" id="ban-img-2" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">BIND</div>
+          </div>
+        </div>
+
+        <div id="3" onclick="BanMap(3)" class="map div3"><img class="map map-img" src="/maps/Loading_Screen_Breeze.png">
+          <img class="ban-img" id="ban-img-3" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">BREEZE</div>
+          </div>
+        </div>
+        <div id="4" onclick="BanMap(4)" class="map div4"><img class="map map-img" src="/maps/Loading_Screen_Fracture.png">
+          <img class="ban-img" id="ban-img-4" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">FRACTURE</div>
+          </div>
+        </div>
+        <div id="5" onclick="BanMap(5)" class="map div5"><img  class="map map-img" src="/maps/Loading_Screen_Haven.png">
+          <img class="ban-img" id="ban-img-5" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">HAVEN</div>
+          </div>
+        </div>
+        <div id="6" onclick="BanMap(6)" class="map div6"><img class="map map-img" src="/maps/Loading_Screen_Icebox.png">
+          <img class="ban-img" id="ban-img-6" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">ICEBOX</div>
+          </div>
+        </div>
+        <div id="7" onclick="BanMap(7)" class="map div7"><img class="map map-img" src="/maps/Loading_Screen_Lotus.png">
+          <img class="ban-img" id="ban-img-7" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">LOTUS</div>
+          </div>
+        </div>
+        <div id="8" onclick="BanMap(8)" class="map div8"><img class="map map-img" src="/maps/Loading_Screen_Pearl.png">
+          <img class="ban-img" id="ban-img-8" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">PEARL</div>
+          </div>
+        </div>
+        <div id="9" onclick="BanMap(9)" class="map div9"><img class="map map-img" src="/maps/Loading_Screen_Split.png">
+          <img class="ban-img" id="ban-img-9" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">SPLIT</div>
+          </div>
+        </div>
+        <div id="10" onclick="BanMap(10)" class="map div10"><img class="map map-img" src="/maps/Loading_Screen_Sunset.png">
+          <img class="ban-img" id="ban-img-10" src="/ban-svgrepo-com.svg">
+          <div class="hover-name-map">
+            <div class="text">SUNSET</div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class=" content-2">
+      <div class="team1-info">
+        <img class="team1logo" id="output1" />
+        <h2 id="team1_name">Team 1</h2>
+      </div>
+    </div>
+    <div class=" content-3">
+      <div class="team2-info">
+        <h2 id="team2_name">Team 2</h2>
+        <img class="team2logo" id="output2" />
+        <br>
+      </div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="item footer">Team Liqid ban map...</div>
+  </div>
+
+  <audio id="beep" preload="auto">
+    <source src="sounds/Hover Over Agent.mp3"></source>
+  </audio>
+  <audio id="click" preload="auto">
+    <source src="sounds/Spike Defused.mp3"></source>
+  </audio>
+  <script>
+		
+		var beepOne = $("#beep")[0];
+		$(".map")
+	.mouseenter(function() {
+		beepOne.play();
+	});
+
+  var ClickMap = $("#click")[0];
+		$(".map")
+	.click(function() {
+		ClickMap.play();
+	});
+	
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/SoundOnHover"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "valorant pick ban"
+	}
+}
