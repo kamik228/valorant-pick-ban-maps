@@ -51,78 +51,97 @@
             }
           };
         </script>
+        <audio id="hoveraudio" src='./sounds/Hover Over Agent.mp3'></audio>
+        <audio id="audio" src='./sounds/Spike Defused.mp3'></audio>
 
       </div>
     </div>
     <div class="item content-1">
       <div class="maps">
-        <div id="1" onclick="BanMap(1)" class="map div1"><img class="map map-img " src="/maps/Loading_Screen_Ascent.png">
+
+
+        <div value="Ascent" id="1" onclick="BanMap(id), getmap(id)" class="map div1"><img class="map map-img" src="/maps/Loading_Screen_Ascent.png">
           <img class="ban-img" id="ban-img-1" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">ASCENT</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">ASCENT</div>
           </div>
         </div>
 
-        <div id="2" onclick="BanMap(2)" class="map div2"><img class="map map-img" src="/maps/Loading_Screen_Bind.png">
+        <div id="2" onclick="BanMap(id)" class="map div2"><img class="map map-img" src="/maps/Loading_Screen_Bind.png">
           <img class="ban-img" id="ban-img-2" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">BIND</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">BIND</div>
           </div>
         </div>
 
-        <div id="3" onclick="BanMap(3)" class="map div3"><img class="map map-img" src="/maps/Loading_Screen_Breeze.png">
+        <div id="3" onclick="BanMap(id)" class="map div3"><img class="map map-img" src="/maps/Loading_Screen_Breeze.png">
           <img class="ban-img" id="ban-img-3" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">BREEZE</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">BREEZE</div>
           </div>
         </div>
-        <div id="4" onclick="BanMap(4)" class="map div4"><img class="map map-img" src="/maps/Loading_Screen_Fracture.png">
+
+
+
+        <div id="4" onclick="BanMap(id)" class="map div4"><img class="map map-img" src="/maps/Loading_Screen_Fracture.png">
           <img class="ban-img" id="ban-img-4" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">FRACTURE</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">FRACTURE</div>
           </div>
         </div>
-        <div id="5" onclick="BanMap(5)" class="map div5"><img  class="map map-img" src="/maps/Loading_Screen_Haven.png">
+
+        <div id="5" onclick="BanMap(id)" class="map div5"><img class="map map-img" src="/maps/Loading_Screen_Haven.png">
           <img class="ban-img" id="ban-img-5" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">HAVEN</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">HEAVEN</div>
           </div>
         </div>
-        <div id="6" onclick="BanMap(6)" class="map div6"><img class="map map-img" src="/maps/Loading_Screen_Icebox.png">
+
+
+        <div id="6" onclick="BanMap(id)" class="map div6"><img class="map map-img" src="/maps/Loading_Screen_Icebox.png">
           <img class="ban-img" id="ban-img-6" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">ICEBOX</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">ICEBOX</div>
           </div>
         </div>
-        <div id="7" onclick="BanMap(7)" class="map div7"><img class="map map-img" src="/maps/Loading_Screen_Lotus.png">
+
+
+        <div id="7" onclick="BanMap(id)" class="map div7"><img class="map map-img" src="/maps/Loading_Screen_Lotus.png">
           <img class="ban-img" id="ban-img-7" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">LOTUS</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">LOTUS</div>
           </div>
         </div>
-        <div id="8" onclick="BanMap(8)" class="map div8"><img class="map map-img" src="/maps/Loading_Screen_Pearl.png">
+
+
+        <div id="8" onclick="BanMap(id)" class="map div8"><img class="map map-img" src="/maps/Loading_Screen_Pearl.png">
           <img class="ban-img" id="ban-img-8" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">PEARL</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">PEARL</div>
           </div>
         </div>
-        <div id="9" onclick="BanMap(9)" class="map div9"><img class="map map-img" src="/maps/Loading_Screen_Split.png">
+
+
+
+        <div id="9" onclick="BanMap(id)" class="map div9"><img class="map map-img" src="/maps/Loading_Screen_Split.png">
           <img class="ban-img" id="ban-img-9" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">SPLIT</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">SPLIT</div>
           </div>
         </div>
-        <div id="10" onclick="BanMap(10)" class="map div10"><img class="map map-img" src="/maps/Loading_Screen_Sunset.png">
+
+
+
+        <div id="10" onclick="BanMap(id)" class="map div10"><img class="map map-img" src="/maps/Loading_Screen_Sunset.png">
           <img class="ban-img" id="ban-img-10" src="/ban-svgrepo-com.svg">
           <div class="hover-name-map">
-            <div class="text">SUNSET</div>
+            <div class="text" type="button" value="" onclick="play()" onmouseover="hoverplay()">SUNSET</div>
           </div>
-
         </div>
 
-
-
       </div>
+
+
     </div>
     <div class=" content-2">
       <div class="team1-info">
@@ -138,30 +157,17 @@
       </div>
     </div>
     <div class="vs">VS</div>
-    <div class="item footer">Team Liqid ban map...</div>
+    <div class="item footer">
+      <div id="teamnowban"></div><div>ㅤVETO MAP</div>
+      <div class="github">
+        <a class="btn btn-link" href="https://github.com/kamilik/valorant-pick-ban-maps" title="Find more info on GitHub">
+          <img class="img-fluid" id="gh-mark" src="https://particles.js.org/images/GitHub-Mark-120px-plus.png" alt="">
+          <span id="gh-project">scarsparkle</span>
+        </a>
+      </div>
+    
+    </div>
   </div>
-
-  <audio id="beep" preload="auto">
-    <source src="sounds/Hover Over Agent.mp3"></source>
-  </audio>
-  <audio id="click" preload="auto">
-    <source src="sounds/Spike Defused.mp3"></source>
-  </audio>
-  <script>
-		
-		var beepOne = $("#beep")[0];
-		$(".map")
-	.mouseenter(function() {
-		beepOne.play();
-	});
-
-  var ClickMap = $("#click")[0];
-		$(".map")
-	.click(function() {
-		ClickMap.play();
-	});
-	
-	</script>
 </body>
 
 </html>
